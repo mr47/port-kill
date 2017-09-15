@@ -3,6 +3,8 @@
 Kill process that uses selected TCP port. Cross platform.
 
 
+[![CircleCI](https://circleci.com/gh/Krizzu/port-kill.svg?style=svg)](https://circleci.com/gh/Krizzu/port-kill)
+
 ## Install
 
 ### Global module
