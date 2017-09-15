@@ -1,0 +1,61 @@
+{
+  "name": "port-kill",
+  "version": "0.0.1",
+  "description": "Kill process that uses selected TCP port. Cross platform.",
+  "license": "MIT",
+  "repository": "github:Krizzu/port-kill",
+  "author": {
+    "name": "Krzysztof Borowy",
+    "email": "krzysztoff.borowy@gmail.com"
+  },
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "pk": "./bin/pk.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "prepublish": "babel src/index.js --out-file lib/index.js",
+    "flow": "flow",
+    "eslint": "eslint src",
+    "jest": "jest src",
+    "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "test": "npm run flow && npm run eslint && npm run jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "eslint-config-callstack-io": "^0.4.1",
+    "flow-bin": "^0.54.1",
+    "jest": "^21.0.2",
+    "np": "^2.16.0",
+    "prettier": "^1.6.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 6
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-flow-strip-types"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "callstack-io"
+  }
+}
