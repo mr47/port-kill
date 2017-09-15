@@ -19,7 +19,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "prepublish": "babel src/index.js --out-file lib/index.js",
+    "prepublish": "babel src --out-dir lib/",
     "flow": "flow",
     "eslint": "eslint src",
     "jest": "jest src",
